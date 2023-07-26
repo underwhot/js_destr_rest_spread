@@ -1,7 +1,6 @@
 "use strict";
 /*
 ЗАДАЧИ:
-
 1.Создайте отдельные массивы игроков каждой команды. (Переменные pleayersTeamOne и pleayersTeamTwo)
 
 2. Первый игрок в каждом массиве - это вратарь, остальные игроки это просто члены команды. Для первых игроков каждой команды, создайте переменную goalKeeper, а для всех остальных fieldPlayers.
@@ -19,10 +18,6 @@ let team1 = 1.33,
 let x = 3.25,
 let team2 = 6.5
 поменяйте имя свойства x на draw.
-
-
-
-
 */
 const game = {
   team1: "Bayern Munich",
@@ -61,3 +56,22 @@ const game = {
     team2: 6.5,
   },
 };
+
+
+// 1 
+const playerTeamOne = [...game.players[0]];
+const playerTeamTwo = [...game.players[1]];
+
+// 2
+// const goalKeepers = [game.players[0][0], game.players[1][0]];
+
+// const [goalKeepers, fieldPlayers] = [...game.players ];
+
+// 3, 4
+const allPlayers = [...game.players[0], ...game.players[1], 'Hero', 'Scorpion', 'Fire'];
+console.log(allPlayers);
+
+// 4
+const [team1, draw, team2] = [game.odds.team1, game.odds.x, game.odds.team2]
+
+console.log(team1, draw, team2);
