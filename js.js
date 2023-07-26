@@ -59,19 +59,20 @@ const game = {
 
 
 // 1 
-const playerTeamOne = [...game.players[0]];
-const playerTeamTwo = [...game.players[1]];
+const [playerTeamOne, playerTeamTwo] = game.players;
+console.log(playerTeamOne);
+console.log(playerTeamTwo);
 
 // 2
-// const goalKeepers = [game.players[0][0], game.players[1][0]];
-
-// const [goalKeepers, fieldPlayers] = [...game.players ];
+const [goalKeeper, ...fieldPlayers] = game.players[0];
+console.log(goalKeeper);
+console.log(fieldPlayers);
 
 // 3, 4
 const allPlayers = [...game.players[0], ...game.players[1], 'Hero', 'Scorpion', 'Fire'];
 console.log(allPlayers);
 
-// 4
-const [team1, draw, team2] = [game.odds.team1, game.odds.x, game.odds.team2]
-
+// 5
+// const [team1, draw, team2] = [game.odds.team1, game.odds.x, game.odds.team2];
+const { odds: { team1, x: draw, team2 } } = game;
 console.log(team1, draw, team2);
